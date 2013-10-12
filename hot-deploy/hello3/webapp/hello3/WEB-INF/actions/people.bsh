@@ -1,0 +1,5 @@
+import org.ofbiz.entity.*;
+
+delegator = request.getAttribute("delegator");
+persons = delegator.findAll("Person");
+context.put("persons", persons);

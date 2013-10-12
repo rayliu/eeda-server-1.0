@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-screen.xsd">
+
+    <screen name="main">
+        <section>
+            <widgets>
+                 <platform-specific>
+                    <html><html-template location="component://hello2/webapp/hello2/includes/header.ftl"/></html>
+                </platform-specific>
+                 <platform-specific>
+                    <html><html-template location="component://hello2/webapp/hello2/includes/main.ftl"/></html>
+                </platform-specific>
+                 <platform-specific>
+                    <html><html-template location="component://hello2/webapp/hello2/includes/footer.ftl"/></html>
+                </platform-specific>
+            </widgets>
+        </section>
+    </screen>
+    
+    <screen name="news">
+        <section>
+            <widgets>
+                 <platform-specific>
+                    <html><html-template location="component://hello2/webapp/hello2/includes/header.ftl"/></html>
+                </platform-specific>
+                 <platform-specific>
+                    <html><html-template location="component://hello2/webapp/hello2/includes/news.ftl"/></html>
+                </platform-specific>
+                 <platform-specific>
+                    <html><html-template location="component://hello2/webapp/hello2/includes/footer.ftl"/></html>
+                </platform-specific>
+            </widgets>
+        </section>
+    </screen>
+    
+    <screen name="people">
+        <section>
+        	<actions>
+        		<script location="component://hello2/webapp/hello2/WEB-INF/actions/people.bsh"/>
+        	</actions>
+            <widgets>
+                 <platform-specific>
+                    <html><html-template location="component://hello2/webapp/hello2/includes/header.ftl"/></html>
+                </platform-specific>
+                 <platform-specific>
+                    <html><html-template location="component://hello2/webapp/hello2/includes/people.ftl"/></html>
+                </platform-specific>
+                 <platform-specific>
+                    <html><html-template location="component://hello2/webapp/hello2/includes/footer.ftl"/></html>
+                </platform-specific>
+            </widgets>
+        </section>
+    </screen>
+    
+</screens>    

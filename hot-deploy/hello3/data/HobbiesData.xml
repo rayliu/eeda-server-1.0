@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--  OpentapsWebApp party change to catalog -->
+<!--  below menu come from the CatalogMenus.xml   Ray 2013-07-22  -->
+<entity-engine-xml>
+    <HelloHobby helloHobbyId="reading" description="Reading" />
+    <HelloHobby helloHobbyId="movies" description="Movies" />
+    <HelloHobby helloHobbyId="theater" description="Theater" />
+    <HelloHobby helloHobbyId="opera" description="Opera" />
+</entity-engine-xml>

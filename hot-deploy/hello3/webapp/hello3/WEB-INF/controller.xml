@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Copyright (c) Open Source Strategies, Inc.
+ * 
+ * Opentaps is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU Affero General Public License as published
+ * by the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Opentaps is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with Opentaps.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<site-conf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/site-conf.xsd">
+
+    <description>Eeda Home Page</description>
+    <owner>Ray Liu</owner>
+    <errorpage>/error/error.jsp</errorpage>
+
+    <!-- event handlers -->
+    <handler name="java" type="request" class="org.ofbiz.webapp.event.JavaEventHandler"/>
+    <handler name="simple" type="request" class="org.ofbiz.webapp.event.SimpleEventHandler"/>
+    <handler name="service" type="request" class="org.ofbiz.webapp.event.ServiceEventHandler"/>
+    <handler name="service-multi" type="request" class="org.ofbiz.webapp.event.ServiceMultiEventHandler"/>
+    <handler name="bsf" type="request" class="org.ofbiz.webapp.event.BsfEventHandler"/>
+
+    <!-- view handlers -->
+    <handler name="screen" type="view" class="org.ofbiz.widget.screen.ScreenWidgetViewHandler"/>
+    <handler name="ftl" type="view" class="org.ofbiz.webapp.ftl.FreeMarkerViewHandler"/>
+    
+
+    <preprocessor>
+        <!-- Events to run on every request before security (chains exempt) -->
+        <!--event type="java" path="org.ofbiz.webapp.control.LoginWorker" invoke="checkExternalLoginKey"/-->
+    </preprocessor>
+    <postprocessor>
+        <!-- Events to run on every request after all other processing (chains exempt) -->
+    </postprocessor>
+
+    <!-- Request Mappings -->
+    <request-map uri="main">
+    	<security https="false" auth="false"/>
+        <response name="success" type="view" value="main"/>
+    </request-map>
+    <request-map uri="news">
+        <response name="success" type="view" value="news"/>
+    </request-map>
+	<request-map uri="people">
+        <response name="success" type="view" value="people"/>
+    </request-map>
+    <request-map uri="guestbook">
+        <response name="success" type="view" value="guestbook"/>
+    </request-map>
+    <request-map uri="hobbies">
+        <response name="success" type="view" value="hobbies"/>
+    </request-map>
+    
+    <request-map uri="createPerson">
+    	<event type="service" invoke="createPerson"/>
+        <response name="success" type="view" value="guestbook"/>
+        <response name="error" type="view" value="guestbook"/>
+    </request-map>
+	<request-map uri="createPersonHobby">
+        <response name="success" type="view" value="hobbies"/>
+        <response name="error" type="view" value="hobbies"/>
+    </request-map>
+    <!-- end of request mappings -->
+
+    <!-- View Mappings -->
+    <view-map name="error" page="component://hello3/webapp/error/error.jsp"/>
+    <view-map name="main" type="screen" page="component://hello3/widget/HelloScreens.xml#main"/>
+    <view-map name="news" type="screen" page="component://hello3/widget/HelloScreens.xml#news"/>
+    <view-map name="people" type="screen" page="component://hello3/widget/HelloScreens.xml#people"/>
+    <view-map name="guestbook" type="screen" page="component://hello3/widget/HelloScreens.xml#guestbook"/>
+    <view-map name="hobbies" type="screen" page="component://hello3/widget/HelloScreens.xml#hobbies"/>
+    <!-- end of view mappings -->
+</site-conf>

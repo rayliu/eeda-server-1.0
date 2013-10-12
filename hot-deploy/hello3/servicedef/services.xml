@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/services.xsd">
+    <description>Hello3 Services</description>
+    <vendor>Ray</vendor>
+    <version>1.0</version>
+
+    <service name="createHelloPerson" engine="java" 
+            location="org.ofbiz.hello3.Hello3Services" invoke="createHelloPerson">
+        <description>Create a HelloPerson</description>
+        <permission-service service-name="partyBasePermissionCheck" main-action="CREATE"/>
+        <auto-attributes mode="IN" entity-name="HelloPerson" include="nonpk" optional="false"/>
+        <attribute mode="OUT" name="helloPersonId" type="String" optional="true"/>
+    </service>
+    <service name="createHelloPersonHobby" engine="simple"
+            location="org/ofbiz/hello3/Hello3Services.xml" invoke="createHelloPersonHobby">
+        <description>create HelloPersonHobby</description>
+        <auto-attributes mode="IN" entity-name="HelloPersonHobby" include="pk" optional="false"/>
+    </service>
+    
+</services>

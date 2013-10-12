@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simple-methods xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/simple-methods.xsd">
+
+    <simple-method method-name="createHelloPersonHobby" short-description="">
+    	<make-value value-field="newEntity" entity-name="HelloPersonHobby"/>
+    	<set-nonpk-fields value-field="newEntity" map-name="parameters"/>
+        <set-pk-fields value-field="newEntity" map-name="parameters"/>
+        <create-value value-field="newEntity"/>
+    </simple-method>
+</simple-methods>

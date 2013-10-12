@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entitymodel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/entitymodel.xsd">
+  <!-- ========================================================= -->
+  <!-- ======================== Defaults ======================= -->
+  <!-- ========================================================= -->
+    <title>Entity of an Open For Business Project Component</title>
+    <description>None</description>
+    <copyright>Copyright 2001-2009 The Apache Software Foundation</copyright>
+    <author>None</author>
+    <version>1.0</version>
+
+  <!-- ========================================================= -->
+  <!-- ======================== Data Model ===================== -->
+  <!-- The modules in this file are as follows:                  -->
+  <!--  - org.ofbiz.party.agreement -->
+  <!--  - org.ofbiz.party.communication -->
+  <!--  - org.ofbiz.party.contact -->
+  <!--  - org.ofbiz.party.need -->
+  <!--  - org.ofbiz.party.party -->
+  <!-- ========================================================= -->
+
+
+  <!-- ========================================================= -->
+  <!-- org.ofbiz.party.agreement -->
+  <!-- ========================================================= -->
+
+    <entity entity-name="HelloPerson"
+            package-name="org.ofbiz.hello3"
+            title="HelloPerson Entity">
+      <field name="helloPersonId" type="id-ne"></field>
+      <field name="firstName" type="id"></field>
+      <field name="lastName" type="id"></field>
+      <prim-key field="helloPersonId"/>
+    </entity>
+    <entity entity-name="HelloHobby"
+            package-name="org.ofbiz.hello3"
+            title="HelloPerson Entity">
+      <field name="helloHobbyId" type="id-ne"></field>
+      <field name="description" type="description"></field>
+      <prim-key field="helloHobbyId"/>
+    </entity>
+    <entity entity-name="HelloPersonHobby"
+            package-name="org.ofbiz.hello3"
+            title="Agreement Entity">
+      <field name="helloPersonId" type="id-ne"></field>
+      <field name="helloHobbyId" type="id-ne"></field>
+      <prim-key field="helloPersonId"/>
+      <prim-key field="helloHobbyId"/>
+      <relation type="one" fk-name="HPRSN_PRSN" rel-entity-name="HelloPerson">
+        <key-map field-name="helloPersonId"/>
+      </relation>
+	  <relation type="one" fk-name="HPRSN_HBBY" rel-entity-name="HelloHobby">
+        <key-map field-name="helloHobbyId"/>
+      </relation>      
+    </entity>
+    
+</entitymodel>

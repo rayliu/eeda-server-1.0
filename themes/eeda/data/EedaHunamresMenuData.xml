@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--  OpentapsWebApp party change to humanres -->
+<!--  below menu come from the humanres/widget/Menus.xml?HumanResAppBar  Ray   liuyubie@gmail.com 2013-07-27  -->
+<entity-engine-xml>
+    <OpentapsWebAppTab applicationId="humanres" tabId="HumanResAppBar" uiLabel="HumanResManager" sequenceNum="10" linkUrl="main"/>
+    <OpentapsWebAppTab applicationId="humanres" tabId="Employees" uiLabel="HumanResEmployees" sequenceNum="20" linkUrl="findEmployees"/>
+    <OpentapsWebAppTab applicationId="humanres" tabId="Employment" uiLabel="HumanResEmployment" sequenceNum="30" linkUrl="FindEmployments"/>
+    <OpentapsWebAppTab applicationId="humanres" tabId="EmplPosition" uiLabel="HumanResEmployeePosition" sequenceNum="40" linkUrl="FindEmplPositions"/>
+    <OpentapsWebAppTab applicationId="humanres" tabId="PerfReview" uiLabel="HumanResPerfReview" sequenceNum="50" linkUrl="FindPerfReviews"/>
+    <OpentapsWebAppTab applicationId="humanres" tabId="EmplSkills" uiLabel="HumanResSkills" sequenceNum="60" linkUrl="FindPartySkills"/>
+    <OpentapsWebAppTab applicationId="humanres" tabId="PartyQual" uiLabel="HumanResPartyQualification" sequenceNum="70" linkUrl="FindPartyQuals"/>
+    <OpentapsWebAppTab applicationId="humanres" tabId="Recruitment" uiLabel="HumanResRecruitment" sequenceNum="75" linkUrl="FindJobRequisitions"/>
+    <OpentapsWebAppTab applicationId="humanres" tabId="Training" uiLabel="HumanResTraining" sequenceNum="80" linkUrl="TrainingCalendar"/>
+    <OpentapsWebAppTab applicationId="humanres" tabId="EmploymentApp" uiLabel="HumanResEmploymentApp" sequenceNum="90" linkUrl="FindEmploymentApps"/>
+    <OpentapsWebAppTab applicationId="humanres" tabId="PartyResume" uiLabel="HumanResPartyResume" sequenceNum="100" linkUrl="FindPartyResumes"/>
+    <OpentapsWebAppTab applicationId="humanres" tabId="Leave" uiLabel="HumanResEmplLeave" sequenceNum="110" linkUrl="FindEmplLeaves"/>
+    <OpentapsWebAppTab applicationId="humanres" tabId="GlobalHRSettings" uiLabel="HumanResGlobalHRSettings" sequenceNum="120" linkUrl="globalHRSettings"/>
+</entity-engine-xml>

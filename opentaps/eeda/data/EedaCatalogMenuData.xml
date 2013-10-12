@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--  OpentapsWebApp party change to catalog -->
+<!--  below menu come from the CatalogMenus.xml   Ray 2013-07-22  -->
+<entity-engine-xml>
+    <OpentapsWebAppTab applicationId="catalog" tabId="CatalogAppBar" uiLabel="ProductCatalogManager" sequenceNum="10" linkUrl="main"/>
+    <OpentapsWebAppTab applicationId="catalog" tabId="featurecats" uiLabel="ProductFeatureCats" sequenceNum="20" linkUrl="EditFeatureCategories"/>
+    <OpentapsWebAppTab applicationId="catalog" tabId="promos" uiLabel="ProductPromos" sequenceNum="30" linkUrl="FindProductPromo"/>
+    <OpentapsWebAppTab applicationId="catalog" tabId="pricerules" uiLabel="ProductPriceRules" sequenceNum="40" linkUrl="FindProductPriceRules"/>
+    <OpentapsWebAppTab applicationId="catalog" tabId="store" uiLabel="ProductStores" sequenceNum="50" linkUrl="FindProductStore"/>
+    <OpentapsWebAppTab applicationId="catalog" tabId="thesaurus" uiLabel="ProductThesaurus" sequenceNum="60" linkUrl="editKeywordThesaurus"/>
+    <OpentapsWebAppTab applicationId="catalog" tabId="reviews" uiLabel="ProductReviews" sequenceNum="70" linkUrl="pendingReviews"/>
+    <OpentapsWebAppTab applicationId="catalog" tabId="configs" uiLabel="ProductConfigItems" sequenceNum="80" linkUrl="FindProductConfigItems"/>
+    <OpentapsWebAppTab applicationId="catalog" tabId="Subscription" uiLabel="ProductSubscriptions" sequenceNum="90" linkUrl="FindSubscription"/>
+    <OpentapsWebAppTab applicationId="catalog" tabId="shipping" uiLabel="ProductShipping" sequenceNum="100" linkUrl="ListShipmentMethodTypes"/>
+    <OpentapsWebAppTab applicationId="catalog" tabId="WebAnalytics" uiLabel="CatalogWebAnalytics" sequenceNum="110" linkUrl="WebAnalytics"/>
+</entity-engine-xml>

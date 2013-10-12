@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-form.xsd">
+	<form name="GuestbookList" type="list" list-name="allGuests">        
+        <auto-fields-entity entity-name="HelloPerson" default-field-type="display"/>
+        <field name="hobbies"><hyperlink target="hobbies?helloPersonId=${helloPersonId}" description="see hobbies"/></field>
+    </form>
+    <form name="AddGuest" type="single" target="createPerson">        
+        <auto-fields-entity entity-name="HelloPerson" default-field-type="display"/>
+        <field name="helloPersonId"><hidden/></field>
+        <field name="submitButton" title="Add a Guest" widget-style="standardSubmit">
+        	<submit button-type="button"/>
+        </field>
+    </form>
+    <form name="HobbiesList" type="list" list-name="allHobbies">
+        <field name="helloHobbyId" title="Hobby">
+        	<display-entity entity-name="HelloHobby" description="${description}"></display-entity>
+        </field>
+    </form>
+    <form name="AddHobby" type="single" target="createPersonHobby">        
+        <auto-fields-entity entity-name="HelloPersonHobby" />
+        <field name="helloPersonId"><hidden/></field>
+        <field name="helloHobbyId">
+        	<drop-down>
+        		<entity-options description="${description}[${helloHobbyId}]" entity-name="HelloHobby"></entity-options>
+        	</drop-down>
+        </field>
+        <field name="submitButton" title="Add a hobby" widget-style="standardSubmit">
+        	<submit button-type="button"/>
+        </field>
+    </form>
+</forms>

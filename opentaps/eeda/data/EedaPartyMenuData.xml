@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<!--  OpentapsWebApp party change to partymgr -->
+<entity-engine-xml>‘
+	<OpentapsWebAppTab applicationId="partymgr" tabId="find" uiLabel="PartyManager" sequenceNum="10" linkUrl="main"/>
+    <OpentapsWebAppTab applicationId="partymgr" tabId="find" uiLabel="PartyParties" sequenceNum="15" linkUrl="findparty"/>
+    <OpentapsWebAppTab applicationId="partymgr" tabId="mycomm" uiLabel="PartyMyCommunications" sequenceNum="20" linkUrl="MyCommunicationEvents"/>
+    <OpentapsWebAppTab applicationId="partymgr" tabId="comm" uiLabel="PartyCommunications" sequenceNum="30" linkUrl="FindCommunicationEvents"/>
+    <OpentapsWebAppTab applicationId="partymgr" tabId="visits" uiLabel="PartyVisits" sequenceNum="40" linkUrl="showvisits"/>
+    <OpentapsWebAppTab applicationId="partymgr" tabId="classification" uiLabel="PartyClassifications" sequenceNum="50" linkUrl="showclassgroups"/>
+    <OpentapsWebAppTab applicationId="partymgr" tabId="security" uiLabel="CommonSecurity" sequenceNum="60" linkUrl="FindSecurityGroup"/>
+    <OpentapsWebAppTab applicationId="partymgr" tabId="addrmap" uiLabel="PageTitleAddressMatchMap" sequenceNum="70" linkUrl="addressMatchMap"/>
+    <OpentapsWebAppTab applicationId="partymgr" tabId="partyinv" uiLabel="PartyInvitation" sequenceNum="80" linkUrl="partyInvitation"/>
+</entity-engine-xml>

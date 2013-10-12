@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--  OpentapsWebApp party change to webtools -->
+<!--  below menu come from the webtools/widget/Menus.xml?WebtoolsAppBar   Ray 2013-07-24  -->
+<entity-engine-xml>
+    <OpentapsWebAppTab applicationId="webtools" tabId="main" uiLabel="main" sequenceNum="10" linkUrl="main"/>
+    <OpentapsWebAppTab applicationId="webtools" tabId="logging" uiLabel="webtoolsLogging" sequenceNum="20" linkUrl="LogView"/>
+    <OpentapsWebAppTab applicationId="webtools" tabId="cache" uiLabel="webtoolsCacheDebugTools" sequenceNum="30" linkUrl="FindUtilCache"/>
+    <OpentapsWebAppTab applicationId="webtools" tabId="artifact" uiLabel="webtoolsArtifactInfo" sequenceNum="40" linkUrl="ArtifactInfo"/>
+    <OpentapsWebAppTab applicationId="webtools" tabId="entity" uiLabel="webtoolsEntityEngine" sequenceNum="50" linkUrl="entitymaint"/>
+    <OpentapsWebAppTab applicationId="webtools" tabId="service" uiLabel="webtoolsServiceEngineTools" sequenceNum="60" linkUrl="ServiceList"/>
+    <OpentapsWebAppTab applicationId="webtools" tabId="importExport" uiLabel="webtoolsImportExport" sequenceNum="70" linkUrl="xmldsdump"/>
+    <OpentapsWebAppTab applicationId="webtools" tabId="stats" uiLabel="webtoolsStatistics" sequenceNum="80" linkUrl="StatsSinceStart"/>
+    <OpentapsWebAppTab applicationId="webtools" tabId="configuration" uiLabel="webtoolsConfiguration" sequenceNum="90" linkUrl="myCertificates"/>
+    <!-- need check permission, how? -->
+    <OpentapsWebAppTab applicationId="webtools" tabId="portalAdmin" uiLabel="webtoolsAdminPortalPage" sequenceNum="100" linkUrl="FindPortalPage"/>
+    <OpentapsWebAppTab applicationId="webtools" tabId="tests" uiLabel="tests" sequenceNum="110" linkUrl="selenium"/>
+</entity-engine-xml>

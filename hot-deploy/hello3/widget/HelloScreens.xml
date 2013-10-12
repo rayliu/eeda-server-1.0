@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-screen.xsd">
+	<screen name="CommonDecorator">
+		<section>
+            <widgets>
+                 <platform-specific>
+                    <html><html-template location="component://hello3/webapp/hello3/includes/header.ftl"/></html>
+                </platform-specific>
+                 <decorator-section-include name="body"/>
+                 <platform-specific>
+                    <html><html-template location="component://hello3/webapp/hello3/includes/footer.ftl"/></html>
+                </platform-specific>
+            </widgets>
+        </section>
+	</screen>
+    <screen name="main">
+        <section>
+            <widgets>
+            	<decorator-screen name="CommonDecorator">
+            		<decorator-section name="body">
+            			<platform-specific>
+                    		<html><html-template location="component://hello3/webapp/hello3/includes/main.ftl"/></html>
+                		</platform-specific>
+            		</decorator-section>
+            	</decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    
+    <screen name="news">
+        <section>
+            <widgets>
+                 <decorator-screen name="CommonDecorator">
+            		<decorator-section name="body">
+            			<platform-specific>
+                    		<html><html-template location="component://hello3/webapp/hello3/includes/news.ftl"/></html>
+                		</platform-specific>
+            		</decorator-section>
+            	</decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    
+    <screen name="people">
+        <section>
+        	<actions>
+        		<script location="component://hello3/webapp/hello3/WEB-INF/actions/people.bsh"/>
+        	</actions>
+            <widgets>
+                 <platform-specific>
+                    <html><html-template location="component://hello3/webapp/hello3/includes/header.ftl"/></html>
+                </platform-specific>
+                 <platform-specific>
+                    <html><html-template location="component://hello3/webapp/hello3/includes/people.ftl"/></html>
+                </platform-specific>
+                 <platform-specific>
+                    <html><html-template location="component://hello3/webapp/hello3/includes/footer.ftl"/></html>
+                </platform-specific>
+            </widgets>
+        </section>
+    </screen>
+    
+    <screen name="guestbook">
+        <section>
+        	<actions>
+        		<entity-condition list="allGuests" entity-name="HelloPerson">
+        			<order-by field-name="helloPersonId"/>
+        		</entity-condition>
+        	</actions>
+            <widgets>
+                 <decorator-screen name="CommonDecorator">
+            		<decorator-section name="body">
+            			<label>Our guest say:</label>
+            			<include-form name="GuestbookList" location="component://hello3/webapp/hello3/guestbook/GuestbookForms.xml" />
+            			<label>Add another guest</label>
+            			<include-form name="AddGuest" location="component://hello3/webapp/hello3/guestbook/GuestbookForms.xml" />
+            		</decorator-section>
+            	</decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    
+     <screen name="hobbies">
+        <section>
+        	<actions>
+        		<set field="helloPersonId" from-field="patameter.helloPersonId"/>
+        		<entity-and list="allHobbies" entity-name="HelloPersonHobby">
+        			<field-map field-name="helloPersonId"/>
+        			<order-by field-name="helloPersonId"/>
+        		</entity-and>
+        		<entity-one value-field="person" entity-name="HelloPerson">
+        			<field-map field-name="helloPersonId"/>
+        		</entity-one>
+        	</actions>
+            <widgets>
+                 <decorator-screen name="CommonDecorator">
+            		<decorator-section name="body">
+            			<label>Hobbies for ${person.firstName} ${person.lastName}</label>
+            			<include-form name="HobbiesList" location="component://hello3/webapp/hello3/guestbook/GuestbookForms.xml" />
+            			<label>Add a hobby for ${person.firstName} ${person.lastName}</label>
+            			<include-form name="AddHobby" location="component://hello3/webapp/hello3/guestbook/GuestbookForms.xml" />
+            		</decorator-section>
+            	</decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+</screens>    
