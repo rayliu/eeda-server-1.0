@@ -110,3 +110,7 @@ debian/stamps/
 debian/orig-work
 .pc
 target/*
+.DS_Store
+.classpath
+.project
+.settings/*
