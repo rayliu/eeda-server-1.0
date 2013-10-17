@@ -18,6 +18,6 @@
 <@import location="component://opentaps-common/webapp/common/includes/lib/opentapsFormMacros.ftl"/>
 
 <div class="form tabletext">
-${uiLabelMap.OpentapsNoAnalyticsCaution} 
+<#--${uiLabelMap.OpentapsNoAnalyticsCaution}--> 
 </div>
 <br/>
