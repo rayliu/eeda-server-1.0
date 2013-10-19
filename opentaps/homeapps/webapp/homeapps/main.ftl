@@ -18,20 +18,23 @@
 					
 					<!-- user dropdown starts -->
 					<div class="btn-group pull-right" >
-						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-							<i class="icon-user"></i><span class="hidden-phone"> admin</span>
-							<span class="caret"></span>
-						</a>
-						<ul class="dropdown-menu">
-							<li><a href="#">Profile</a></li>
-							<li class="divider"></li>
-							<li><a href="javascript:void(0);" id="logoutBtn">Logout</a>							    
-								<form id="logout" method="post" action="<@ofbizUrl>logout${previousParams?if_exists}</@ofbizUrl>" style="display:none;">
-							        <input class="decorativeSubmit" style="width:65px; margin-left:1px;" type="submit"  value="${uiLabelMap.CommonLogout}" />
-							    </form>
-							</li>
-						</ul>
+						<#if requestAttributes.userLogin?has_content>
+					        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+								<i class="icon-user"></i><span class="hidden-phone">${userLogin.userLoginId}</span>
+								<span class="caret"></span>
+							</a>
+					    </#if>
 						
+						<ul class="dropdown-menu">
+							<#if requestAttributes.userLogin?has_content>
+						        <#if enableInternalMessaging?default(false)>${screens.render("component://opentaps-common/widget/screens/common/CommonScreens.xml#newMessageSummary")}</#if>
+						        <li><a href="<@ofbizUrl>myProfile</@ofbizUrl>" class="linktext">${uiLabelMap.PartyProfile}</a></li>
+						        <li class="divider"></li>
+						    </#if>
+							<#if requestAttributes.userLogin?has_content>
+						        <li><a href="<@ofbizUrl>logout</@ofbizUrl>" class="linktext">${uiLabelMap.CommonLogout}</a></li>
+						    </#if>
+						</ul>
 					</div>
 					<!-- user dropdown ends -->
 					
